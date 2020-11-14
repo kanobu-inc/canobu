@@ -11,6 +11,13 @@ void event(int type, int bot){
 void game(int user){
     srand(time(0));
     int bot = 1 + rand() % 3;
+    user = 2;
+
+    int massive[3][3] = {
+        {2, 0, 1},
+        {1, 2, 0},
+        {0, 1, 2}
+    };
 
     user--;
     bot--;
@@ -24,29 +31,10 @@ void game(int user){
         return;
     }
 
-    if (user == 0){
-        if (bot == 0){
-            event(2, bot);
-        } else if (bot == 1){
-            event(0, bot);
-        } else if (bot == 2){
-            event(1, bot);
-        }
-    } else if (user == 1){
-        if (bot == 0){
-            event(1, bot);
-        } else if (bot == 1){
-            event(2, bot);
-        } else if (bot == 2){
-            event(0, bot);
-        }
-    } else if (user == 2){
-        if (bot == 0){
-            event(0, bot);
-        } else if (bot == 1){
-            event(1, bot);
-        } else if (bot == 2){
-            event(2, bot);
+    for (int i = 0; i < 3; ++i){
+        if (bot == i){
+            event(massive[user][bot], bot);
+            break;
         }
     }
 }
