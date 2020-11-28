@@ -7,6 +7,7 @@ int main(){
 
     game.logo();
     game.enter();
+
     cout << game.game() << endl;
 
     return 0;
