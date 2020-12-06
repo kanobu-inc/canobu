@@ -51,6 +51,7 @@ class Canobu {
             cout << "| (_| (_| | | | | (_) | |_) | |_| |" << endl;
             cout << " \\___\\__,_|_| |_|\\___/|_.__/ \\__,_|" << endl << endl;
             cout << "\033[0m";
+
             for (int i = 0; i < 3; ++i){
                 cout << i + 1 << ". " << objects[i] << endl;
             }
