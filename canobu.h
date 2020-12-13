@@ -14,6 +14,8 @@ class Canobu {
                 if (bot == i){
                     result = massive[user][bot];
 
+					cout << "\033[1m";
+
                     switch (result){
                         case 0:
                             cout << "\033[32m";
@@ -44,7 +46,7 @@ class Canobu {
         }
 
         void logo(){
-            cout << "\033[34m";
+            cout << "\033[1m\033[34m";
             cout << "                       _           " << endl;
             cout << "  ___ __ _ _ __   ___ | |__  _   _ " << endl;
             cout << " / __/ _` | '_ \\ / _ \\| '_ \\| | | |" << endl;
