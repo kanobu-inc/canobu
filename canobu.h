@@ -1,13 +1,31 @@
 #include <ctime>
+#include <conio.h>
+
 using namespace std;
+
+bool checkWin() {
+    #ifdef __WIN32__
+        return true;
+    #else
+        return false;
+    #endif
+}
 
 class Canobu {
     public:
+        int random(){
+            srand(time(0));
+            return rand() % 3;
+        }
+
         string game(){
+            bot = random();
+            type = 1;
+
             if (user <= 2){
                 cout << endl << "Bot choice..." << endl << endl;
             } else {
-                return "Введите число от 1 до 3.";
+                return "\n\033[31mError!\033[0m Enter number from 1 until 3.";
             }
 
             for (int i = 0; i < 3; ++i){
@@ -36,13 +54,15 @@ class Canobu {
 
         void enter(){
             cout << "Enter your choice: ";
-            cin >> user;
+
+            if (checkWin()) {
+                user = _getch() - 48;
+                cout << user << endl;
+            } else {
+                cin >> user;
+            }
+
             user--;
-
-            srand(time(0));
-            bot = rand() % 3;
-
-            type = 1;
         }
 
         void logo(){

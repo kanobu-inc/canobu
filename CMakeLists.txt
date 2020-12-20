@@ -6,3 +6,4 @@ endif()
 
 project(canobu)
 add_executable(canobu canobu.cpp)
+add_executable(test test.cpp)
