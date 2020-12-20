@@ -1,15 +1,6 @@
 #include <ctime>
-#include <conio.h>
 
 using namespace std;
-
-bool checkWin() {
-    #ifdef __WIN32__
-        return true;
-    #else
-        return false;
-    #endif
-}
 
 class Canobu {
     public:
@@ -54,13 +45,7 @@ class Canobu {
 
         void enter(){
             cout << "Enter your choice: ";
-
-            if (checkWin()) {
-                user = _getch() - 48;
-                cout << user << endl;
-            } else {
-                cin >> user;
-            }
+            cin >> user;
 
             user--;
         }
