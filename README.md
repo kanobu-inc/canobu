@@ -1,14 +1,14 @@
 # 🗿✂️📄 Canobu
 Kanobu. Now rewritten in C++
 
-# 🔨 Building
+## 🔨 Building
 For building enter this lines:
 ```bash
 cmake .
 make
 ./canobu
 ```
-## ⚠️ Recommendation
+### ⚠️ Recommendation
 * If you use `MinGW` write:
 ```bash
 cmake . -G "MinGW Makefiles" 
