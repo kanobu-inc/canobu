@@ -9,11 +9,11 @@ make
 ./canobu
 ```
 ## ⚠️ Recommendation
-* If you use MinGW write:
+* If you use `MinGW` write:
 ```bash
 cmake . -G "MinGW Makefiles" 
 ```
-* If you use Haiku x86 write:
+* If you use `Haiku x86` write:
 ```bash
 cmake . -CMAKE_CXX_COMPILER=g++-x86
 ```
